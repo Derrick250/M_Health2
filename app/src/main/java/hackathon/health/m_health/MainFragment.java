@@ -40,6 +40,7 @@ public class MainFragment extends Fragment {
     private TextView tvPressure;
     private TextView tvTemperature;
     private TextView tvHumidity;
+    private TextView tvLikelihood;
     Toolbar mToolbar;
     private Context context;
 
@@ -87,6 +88,7 @@ public class MainFragment extends Fragment {
         tvPressure = (TextView)view.findViewById(R.id.tvPressure);
         tvTemperature = (TextView)view.findViewById(R.id.tvTemperature);
         tvHumidity = (TextView)view.findViewById(R.id.tvHumidity);
+        tvLikelihood = (TextView)view.findViewById(R.id.tvLikely);
         new LongOperation().execute();
         return view;
     }
@@ -193,10 +195,11 @@ public class MainFragment extends Fragment {
                 humidity = main.getDouble("humidity");
                 pressure = main.getDouble("pressure");
 
-                value = (- 15.2 + (0.0071 * max_temp) + (0.0179 * min_temp) - (0.0067 * temp) + (0.676 *pressure)  - (0.00424 * humidity) + (0.0135 * wind))/10;
+                value = (- 15.2 + (0.0071 * max_temp) + (0.0179 * min_temp) - (0.0067 * temp) + (0.676 *pressure)  - (0.00424 * humidity) + (0.0135 * wind))/100;
                 tvPressure.setText("" + pressure);
-                tvTemperature.setText(String.format("%02f",temp));
+                tvTemperature.setText(String.format("%.2f",temp));
                 tvHumidity.setText("" + humidity + "%");
+                tvLikelihood.setText(String.format("%.2f",value));
                 System.out.println(">>>>>>>>>>>>>>>>>>>>>>>The value is " + value);
                 if(humidity > 20){
                     notice(humidity);

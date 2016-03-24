@@ -8,46 +8,84 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView android:text="Pressure" android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30dp" android:paddingLeft="20dp"/>
-        <TextView  android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/tvPressure"
-            android:textSize="30dp" android:paddingLeft="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
 
-        <View
-            android:layout_width="match_parent" android:layout_marginBottom="10dp"
-            android:layout_height="1dp" android:layout_marginTop="10dp"
-            android:background="@android:color/darker_gray"/>
-        <TextView android:text="Temperature" android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30dp" android:paddingLeft="20dp"/>
-        <TextView  android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/tvTemperature"
-            android:textSize="30dp" android:paddingLeft="20dp"/>
+            <TextView android:text="Pressure" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                android:textSize="30dp" android:paddingLeft="20dp"/>
+            <TextView  android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tvPressure"
+                android:textSize="20dp" android:paddingLeft="50dp"/>
 
-        <View
-            android:layout_width="match_parent" android:layout_marginBottom="10dp"
-            android:layout_height="1dp" android:layout_marginTop="10dp"
-            android:background="@android:color/darker_gray"/>
-        <TextView android:text="Humidity" android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30dp" android:paddingLeft="20dp"/>
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/tvHumidity"
-            android:textSize="30dp" android:paddingLeft="20dp"/>
+       </LinearLayout>
+
+
 
         <View
             android:layout_width="match_parent" android:layout_marginBottom="10dp"
             android:layout_height="1dp" android:layout_marginTop="10dp"
             android:background="@android:color/darker_gray"/>
 
-        <TextView android:text="Likelihood" android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30dp" android:paddingLeft="20dp"/>
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/tvLikely"
-            android:textSize="30dp" android:paddingLeft="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView android:text="Temperature" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30dp" android:paddingLeft="20dp"/>
+            <TextView  android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tvTemperature"
+                android:textSize="20dp" android:paddingLeft="50dp"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent" android:layout_marginBottom="10dp"
+            android:layout_height="1dp" android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView android:text="Humidity" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="25"
+                android:textSize="30dp" android:paddingLeft="20dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_weight="75"
+                android:layout_height="wrap_content" android:id="@+id/tvHumidity"
+                android:textSize="20dp" android:paddingLeft="50dp"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent" android:layout_marginBottom="70dp"
+            android:layout_height="1dp" android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView android:text="Scale" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="#000000"
+                android:textSize="40dp" android:paddingLeft="20dp"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tvLikely" android:textColor="#000000"
+                android:textSize="30dp" android:paddingLeft="50dp"/>
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
